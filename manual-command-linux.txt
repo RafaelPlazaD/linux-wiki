@@ -1,0 +1,98 @@
+
+
+    Instalación de paquetes:
+        pacman -S "paquete": Instala un paquete desde los repositorios oficiales.
+        pacman -Sy "paquete": Sincroniza y actualiza la información de los repositorios antes de instalar el paquete.
+
+    Actualización de paquetes:
+        pacman -Sy: Sincroniza los repositorios antes de actualizar.
+        pacman -Syy: Obliga a la actualización de los repositorios.
+        pacman -Syu: Sincroniza y actualiza todos los paquetes.
+        pacman -Su: Actualiza los paquetes sin sincronizar repositorios.
+
+    Búsqueda de paquetes:
+        pacman -Ss "nombre_del_paquete": Busca un paquete.
+        pacman -Sg "nombre_grupo": Lista los paquetes de un grupo.
+        pacman -Qs "nombre_del_paquete": Busca un paquete ya instalado.
+        pacman -Qi "nombre_del_paquete": Muestra información detallada de un paquete instalado.
+        pacman -Si "nombre_del_paquete": Proporciona información muy detallada de un paquete.
+
+    Eliminación de paquetes:
+        pacman -R "paquete": Elimina el paquete sin sus dependencias.
+        pacman -Rs "paquete": Elimina el paquete y sus dependencias no utilizadas.
+
+    Mover - renombrar {
+        renombrar : mv antiguo-nombre nuevo-nombre
+        mover : mv file ruta/ruta/
+    }
+
+    busqueda {
+        busqueda-extension : find ruta/ -name "*.txt"
+    }
+
+    grep {
+        grep 'palabra' file.txt 
+
+        //buscar el numero de veces que aparece una palabra en un archivo
+        grep -c 'palabra' archivo.txt
+
+        //tomar la salida de un comando  y filtrarla 
+        cat /proc/cpuinfo | grep -i 'core id'
+        // ingnorar mayusculas y minusculas
+        grep -i 'palabra' file.txt
+
+        //guardar la salida de grep en un archivo
+        grep  -i 'core id' > file.txt
+    }
+    Descripsion normal de los datos y las cosas que estamos contrullendo en este momento porque trabajamos de sol a sol en todas 
+    las mañanas
+    -----------------------------------------------------------------------        
+    ps basic comands
+    -----------------------------------------------------------------------       
+    ps list los procesos del shel 
+    ps -e lista todos los precesos 
+    ps -f full format listing of processes
+    ps -ef full format listing of all processes
+    ps -u <user> list processes for a specific user
+    
+_______________________________________________
+Connect to wifi
+_______________________________________________
+
+using CLI
+
+1 nmcli device wifi list 
+ouput :
+IN-USE  SSID                           MODE   CHAN  RATE        SIGNAL  BARS  SECURITY
+        1st Network                    Infra  1     54 Mbit/s   65      ▂▄▆_  --
+        2nd Network                    Infra  1     130 Mbit/s  52      ▂▄__  --
+        3rd Network                    Infra  10    195 Mbit/s  29      ▂___  WPA2
+        
+2 nmcli device wifi connect $SSID password $password
+
+aditional {
+    #View previously saved Network connections
+    $nmcli con show 
+
+    #Disconnect the current connection 
+    $nmcli con down <ssid> 
+
+    #Connect to a saved connection 
+    $nmcli con up SSID
+}
+ 
+using TUI
+1 nmtui
+
+_______________________________________________
+Gret notes about linux
+_______________________________________________
+show maps virtual memorio of kernel over process
+
+cat /proc/pid-proce/maps : cat /proc/1217/maps
+
+_______________________________________________
+information about promt
+for show information about promt we can uses the next comand 
+$echo $PS1
+
