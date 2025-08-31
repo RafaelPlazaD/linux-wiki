@@ -11,6 +11,7 @@ Esta es una colección de notas y comandos de Linux, organizada por categorías.
 
 ## Red
 - [wifi - Conexión a Redes WiFi](comandos/red/wifi.md)
+- [ftp - Conexión ftp](comandos/red/ftp.md)
 
 ## Sistema
 - [pacman - Gestión de Paquetes](comandos/sistema/pacman.md)
