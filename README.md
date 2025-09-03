@@ -1,5 +1,6 @@
 # Índice de la Wiki de Linux
 
+![baner](./banner-wiki.png)
 Esta es una colección de notas y comandos de Linux, organizada por categorías.
 
 ## Archivos y Directorios
